@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.springsecurity.dao.UserDao">
+    <resultMap id="userData" type="com.itheima.springsecurity.model.UserDto" >
+        <id column="id" property="id" jdbcType="BIGINT"></id>
+        <result column="username" property="username" jdbcType="VARCHAR"></result>
+        <result column="password" property="password" jdbcType="VARCHAR"></result>
+        <result column="fullname" property="fullname" jdbcType="VARCHAR"></result>
+        <result column="mobile" property="mobile" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <resultMap id="permissionData" type="com.itheima.springsecurity.model.PermissionDto" >
+        <id column="user_id" property="id" jdbcType="VARCHAR" />
+        <result column="code" property="code" jdbcType="VARCHAR" />
+        <result column="description" property="description" jdbcType="VARCHAR" />
+        <result column="url" property="url" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="getUserByname" parameterType="String" resultMap="userData" >
+        select * from t_user where username=#{username}
+    </select>
+    
+    <select id="getPermissionByname" parameterType="String" resultMap="permissionData" >
+        SELECT user_id, CODE, description, url FROM
+            (
+                SELECT  ur.user_id,rp.permission_id  FROM t_user_role ur
+                LEFT JOIN t_role_permission rp ON rp.role_id=ur.role_id   WHERE ur.user_id=#{id}
+            ) AS t_cre
+        LEFT JOIN t_permission pe ON pe.id=t_cre.permission_id;
+    </select>
+
+
+</mapper>

@@ -1,0 +1,9 @@
+com/itheima/springsecurity/controller/UserController.class
+com/itheima/springsecurity/model/PermissionDto.class
+com/itheima/springsecurity/config/WebSecurityConfig.class
+com/itheima/springsecurity/service/SpringDataUserDetailsService.class
+com/itheima/springsecurity/SecuritySpringBootApp.class
+com/itheima/springsecurity/model/UserDto.class
+com/itheima/springsecurity/config/WebConfig.class
+com/itheima/springsecurity/controller/LoginController.class
+com/itheima/springsecurity/dao/UserDao.class

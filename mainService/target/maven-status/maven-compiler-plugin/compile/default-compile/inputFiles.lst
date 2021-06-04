@@ -1,0 +1,9 @@
+/root/IdeaProjects/SpringSecurity/mainService/src/main/java/com/itheima/springsecurity/controller/UserController.java
+/root/IdeaProjects/SpringSecurity/mainService/src/main/java/com/itheima/springsecurity/service/SpringDataUserDetailsService.java
+/root/IdeaProjects/SpringSecurity/mainService/src/main/java/com/itheima/springsecurity/controller/LoginController.java
+/root/IdeaProjects/SpringSecurity/mainService/src/main/java/com/itheima/springsecurity/model/PermissionDto.java
+/root/IdeaProjects/SpringSecurity/mainService/src/main/java/com/itheima/springsecurity/config/WebConfig.java
+/root/IdeaProjects/SpringSecurity/mainService/src/main/java/com/itheima/springsecurity/SecuritySpringBootApp.java
+/root/IdeaProjects/SpringSecurity/mainService/src/main/java/com/itheima/springsecurity/model/UserDto.java
+/root/IdeaProjects/SpringSecurity/mainService/src/main/java/com/itheima/springsecurity/config/WebSecurityConfig.java
+/root/IdeaProjects/SpringSecurity/mainService/src/main/java/com/itheima/springsecurity/dao/UserDao.java
