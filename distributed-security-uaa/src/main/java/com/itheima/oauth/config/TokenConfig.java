@@ -7,8 +7,9 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
 
 @Configuration
 public class TokenConfig {
+    //以怎样的方式存储Token
     @Bean
     public TokenStore tokenStore() {
-        return new InMemoryTokenStore();
+        return new InMemoryTokenStore();//内存
     }
 }
