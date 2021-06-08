@@ -15,6 +15,12 @@ spring:
     url: jdbc:mysql://localhost:3306/user_db?useUnicode=true&characterEncoding-utr-8&useSSL=false
     username: root
     password: 3333
+
+
+  main:  #重要，如果没有会报错，因为需要覆盖  ClientDetailsServiceConfiguration
+    allow-bean-definition-overriding: true
+
+
 #  freemarker:
 #    charset: UTF-8
 #    content‐type: text/html

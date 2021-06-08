@@ -2,7 +2,6 @@
 /home/zhuangjie/code/i/SpringSecurityOAauth2/distributed-security-uaa/src/main/java/com/itheima/oauth/config/TokenConfig.java
 /home/zhuangjie/code/i/SpringSecurityOAauth2/distributed-security-uaa/src/main/java/com/itheima/oauth/model/UserDto.java
 /home/zhuangjie/code/i/SpringSecurityOAauth2/distributed-security-uaa/src/main/java/com/itheima/oauth/config/AuthorizationServer.java
-/home/zhuangjie/code/i/SpringSecurityOAauth2/distributed-security-uaa/src/main/java/com/itheima/oauth/controller/testController.java
 /home/zhuangjie/code/i/SpringSecurityOAauth2/distributed-security-uaa/src/main/java/com/itheima/oauth/model/PermissionDto.java
 /home/zhuangjie/code/i/SpringSecurityOAauth2/distributed-security-uaa/src/main/java/com/itheima/oauth/UAAServer.java
 /home/zhuangjie/code/i/SpringSecurityOAauth2/distributed-security-uaa/src/main/java/com/itheima/oauth/dao/UserDao.java
