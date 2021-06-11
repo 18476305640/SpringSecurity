@@ -6,6 +6,8 @@ server:
 #    protocol_header: x‐forwarded‐proto
 #    remote_ip_header: x‐forwarded‐for
 #  use‐forward‐headers: true
+
+
 spring:
   application:
     name: uaa‐service
@@ -57,11 +59,24 @@ feign:
 #      springframework:
 #        web: info
 #    root: debug
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:53000/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+    preferIpAddress: true
 management:
   endpoints:
     web:
       exposure:
         include: refresh,health,info,env
+
+
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.itheima.oauth.model
+
+
+
+

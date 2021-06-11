@@ -1,8 +1,0 @@
-com/itheima/oauth/config/AuthorizationServer.class
-com/itheima/oauth/model/UserDto.class
-com/itheima/oauth/model/PermissionDto.class
-com/itheima/oauth/config/TokenConfig.class
-com/itheima/oauth/dao/UserDao.class
-com/itheima/oauth/config/WebSecurityConfig.class
-com/itheima/oauth/service/SpringDataUserDetailsService.class
-com/itheima/oauth/UAAServer.class

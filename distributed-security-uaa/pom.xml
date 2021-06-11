@@ -16,6 +16,7 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+
     <dependencies>
         <!--web/actuator这两个一般一起使用，写在一起-->
         <dependency>
@@ -69,6 +70,10 @@
         <!--            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>-->
         <!--        </dependency>-->
 
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
         <!--Mybatis和SpringBoot的整合-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
