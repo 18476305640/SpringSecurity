@@ -1,28 +1,54 @@
-server:
-  port: 53020
-  servlet:
-    context‐path: /uaa
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:53000/eureka/
+#  instance:
+#    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+#    preferIpAddress: true
+#feign:
+#  compression:
+#    request:
+#      enabled: true
+#      mime-types:
+#        - text/xml
+#        - application/xml
+#        - application/json
+#      min-request-size: 2048
+#    response:
+#      enabled: true
+#  hystrix:
+#    enabled: true
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        web: info
+#    root: debug
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: refresh,health,info,env
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
+#  type-aliases-package: com.itheima.oauth.model
+#server:
+#  port: 53020
+#  servlet:
+#    context-path: /uaa
 #  tomcat:
-#    protocol_header: x‐forwarded‐proto
-#    remote_ip_header: x‐forwarded‐for
-#  use‐forward‐headers: true
-
-
-spring:
-  application:
-    name: uaa‐service
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://localhost:3306/user_db?useUnicode=true&characterEncoding-utr-8&useSSL=false
-    username: root
-    password: 3333
-
-
-  main:  #重要，如果没有会报错，因为需要覆盖  ClientDetailsServiceConfiguration
-    allow-bean-definition-overriding: true
-
-
+#    protocol_header: x-forwarded-proto
+#    remote_ip_header: x-forwarded-for
+#  use-forward-headers: true
+#spring:
+#  application:
+#    name: uaa‐service
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    driver-class-name: org.gjt.mm.mysql.Driver
+#    url: jdbc:mysql://localhost:3306/user_db?useUnicode=true&characterEncoding-utr-8&useSSL=false
+#    username: root
+#    password: 3333
 #  freemarker:
 #    charset: UTF-8
 #    content‐type: text/html
@@ -34,12 +60,49 @@ spring:
 #      charset: UTF-8
 #      enabled: true
 #      force: true
-#  main:
+#  main:   #重要，如果没有会报错，因为需要覆盖  ClientDetailsServiceConfiguration
 #    allow‐bean‐definition‐overriding: true
 #  mvc:
 #    throw‐exception‐if‐no‐handler‐found: true
 #  resources:
 #    add‐mappings: false
+
+
+
+
+server:
+  port: 53020
+  servlet:
+    context‐path: /uaa
+  tomcat:
+    protocol_header: x‐forwarded‐proto
+    remote_ip_header: x‐forwarded‐for
+  use‐forward‐headers: true
+spring:
+  application:
+    name: uaa-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user_db?useUnicode=true&characterEncoding-utr-8&useSSL=false
+    username: root
+    password: 3333
+  freemarker:
+    charset: UTF-8
+    content-type: text/html
+    enabled: true
+    request-context-attribute: rc
+    suffix: .html
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  main:
+    allow-bean-definition-overriding: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
 feign:
   compression:
     request:
@@ -53,12 +116,12 @@ feign:
       enabled: true
   hystrix:
     enabled: true
-#logging:
-#  level:
-#    org:
-#      springframework:
-#        web: info
-#    root: debug
+logging:
+  level:
+    org:
+      springframework:
+        web: info
+    root: debug
 eureka:
   client:
     serviceUrl:
@@ -71,11 +134,10 @@ management:
     web:
       exposure:
         include: refresh,health,info,env
-
-
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.itheima.oauth.model
+
 
 
 

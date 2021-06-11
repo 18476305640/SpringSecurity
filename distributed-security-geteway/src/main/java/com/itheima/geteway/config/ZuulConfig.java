@@ -9,10 +9,13 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 /**
+ * @author Administrator
+ * @version 1.0
  * 将filter纳入spring 容器:
- */
+ **/
 @Configuration
 public class ZuulConfig {
+
     @Bean
     public AuthFilter preFileter() {
         return new AuthFilter();
